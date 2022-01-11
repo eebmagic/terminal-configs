@@ -36,6 +36,9 @@ This repo is a collection of environment files I use to setup new macs.
 
 2. Copy the `pythonTools/` directory into your home directory (this is required to match up with the aliased commands)
 
+## .vimrc
+If you ever use vim you may want to use the provided `.vimrc` file by moving it to `~/.vimrc`
+
 
 # Other Suggestions
 You may want to also use fzf (https://github.com/junegunn/fzf).
