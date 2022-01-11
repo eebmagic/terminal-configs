@@ -26,9 +26,13 @@ alias sublime='open -a /Applications/Sublime\ Text.app/' # Assumes that you have
 alias subl='sublime'
 
 # Links to scripts
+# Count the number of instances of all file extensions in a directory
 alias counttypes='python3 ~/pythonTools/type_counts/counttypes'
 alias typecounts='counttypes '
 alias typecount='counttypes '
-alias opengit='python3 ~/pythonTools/openers/opengit.py '	# Open url for current git repo
-alias openlink='python3 ~/pythonTools/openers/openlink.py ' # Open link contained in a .txt file (with no other contents)
+
+# Open url for current git repo
+alias opengit='python3 ~/pythonTools/openers/opengit.py '
+# Open link contained in a .txt file (with no other contents)
+alias openlink='python3 ~/pythonTools/openers/openlink.py '
 
