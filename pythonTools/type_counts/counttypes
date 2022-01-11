@@ -1,0 +1,49 @@
+#!/usr/local/bin/python3
+'''
+Counts the number of instances of all file extensions in a given dir.
+'''
+import os
+import sys
+
+def get_type(filename):
+    output = filename.split(".")[-1]
+    
+    if filename.startswith("."):
+        output = "." + output
+
+    return output
+
+
+def get_counts(filelist):
+    counts = {}
+    for file in filelist:
+        if os.path.isdir(file):
+            if "/Directories/" in counts:
+                counts["/Directories/"] += 1
+            else:
+                counts["/Directories/"] = 1
+
+        else:
+            t = get_type(file)
+            if t in counts:
+                counts[t] += 1
+            else:
+                counts[t] = 1
+
+    return counts
+
+
+# Make counts
+files = os.listdir()
+counts = get_counts(files)
+
+
+# Sort results
+ordered = sorted(counts, key = lambda i : counts[i])
+
+# Print out results
+for t in ordered:
+    print(f"{counts[t]} \t: {t}")
+
+if "-t" in sys.argv or "--total" in sys.argv:
+    print(f"Total: {len(files)}")
