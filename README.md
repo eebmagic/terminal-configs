@@ -36,3 +36,8 @@ This repo is a collection of environment files I use to setup new macs.
 
 2. Copy the `pythonTools/` directory into your home directory (this is required to match up with the aliased commands)
 
+
+# Other Suggestions
+You may want to also use fzf (https://github.com/junegunn/fzf).
+
+I like this tutorial from YouTube: https://www.youtube.com/watch?v=1a5NiMhqAR0&t=49s
