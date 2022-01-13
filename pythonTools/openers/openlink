@@ -1,0 +1,57 @@
+#!/usr/bin/env python3
+'''
+This script can be used to open links in a file.
+Call this script on a file that contains urls.
+That url will then be opened in your browser.
+NOTE: This script can run on many files/links at once,
+        ex: openlink link_a.txt link_b.txt link_c.txt
+
+Alternatively you can pass in text as stdin.
+ex: cat file.txt |grep youtube |openlink --all
+
+NOTE: adding the --all option will open all links passed in
+    or all links contained in the passed files.
+'''
+import os
+import sys
+import select
+
+def getLinks(text):
+    links = []
+    for line in text.split('\n'):
+        if 'http://' in line or 'https://' in line:
+            for word in line.split(' '):
+                if word.startswith('https://') or word.startswith('http://'):
+                    links.append(word)
+
+    return links
+
+def main(text, openall=False):
+    links = getLinks(text)
+    if openall:
+        for link in links:
+            os.system(f'open {link}')
+    else:
+        os.system(f'open {links[0]}')
+
+if __name__ == '__main__':
+    args = sys.argv[:]
+    if '--all' in args:
+        openall = True
+        args.remove('--all')
+    else:
+        openall = False
+
+    if len(args) >= 2:
+        content = ''
+        for file in args[1:]:
+            with open(file) as f:
+                content += f.read() + '\n'
+        if not openall:
+            openall = len(args[1:]) >= 2
+        main(content, openall=openall)
+    else:
+        if select.select([sys.stdin,],[],[],0.0)[0]:
+            main(sys.stdin.read(), openall=openall)
+        else:
+            print('No files passed or data to read from stdin')
