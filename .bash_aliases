@@ -34,5 +34,5 @@ alias typecount='counttypes '
 # Open url for current git repo
 alias opengit='python3 ~/pythonTools/openers/opengit.py '
 # Open link contained in a .txt file (with no other contents)
-alias openlink='python3 ~/pythonTools/openers/openlink.py '
+alias openlink='python3 ~/pythonTools/openers/openlink '
 
