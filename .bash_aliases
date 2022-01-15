@@ -27,12 +27,12 @@ alias subl='sublime'
 
 # Links to scripts
 # Count the number of instances of all file extensions in a directory
-alias counttypes='python3 ~/pythonTools/type_counts/counttypes'
+alias counttypes='python3 ~/Documents/terminal_configs/pythonTools/type_counts/counttypes'
 alias typecounts='counttypes '
 alias typecount='counttypes '
 
 # Open url for current git repo
-alias opengit='python3 ~/pythonTools/openers/opengit.py '
+alias opengit='python3 ~/Documents/terminal_configs/pythonTools/openers/opengit.py '
 # Open link contained in a .txt file (with no other contents)
-alias openlink='python3 ~/pythonTools/openers/openlink '
+alias openlink='python3 ~/Documents/terminal_configs/pythonTools/openers/openlink '
 
