@@ -31,6 +31,8 @@ alias counttypes='python3 ~/Documents/terminal_configs/pythonTools/type_counts/c
 alias typecounts='counttypes '
 alias typecount='counttypes '
 
+alias weather='curl wttr.in/Atlanta\?u'
+
 # Open url for current git repo
 alias opengit='python3 ~/Documents/terminal_configs/pythonTools/openers/opengit.py '
 # Open link contained in a .txt file (with no other contents)
