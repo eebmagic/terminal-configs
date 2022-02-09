@@ -24,6 +24,8 @@ alias tre='tree -L 2'	# Shallow tree of directory
 alias r='ranger'
 alias sublime='open -a /Applications/Sublime\ Text.app/' # Assumes that you have sublime text installed
 alias subl='sublime'
+alias python='python3'
+alias youtube-dl-mp3='youtube-dl --extract-audio --audio-format mp3 '
 
 # Links to scripts
 # Count the number of instances of all file extensions in a directory
